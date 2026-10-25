@@ -3,11 +3,11 @@ from transformers import pipeline
 
 st.set_page_config(
     page_title="Hugging Face Summarizer",
-    page_icon="📝",
+    page_icon="",
     layout="centered"
 )
 
-st.title("📝 Text Summarization App")
+st.title(" Text Summarization App")
 st.write("Summarize articles using Hugging Face Pipelines.")
 
 # Load and cache the model
@@ -36,7 +36,7 @@ token_limits = {
     "Long": 150
 }
 
-if st.button("✨ Generate Summary", type="primary"):
+if st.button(" Generate Summary", type="primary"):
     if not text.strip():
         st.warning("Please enter some text.")
     else:
@@ -77,11 +77,11 @@ if st.button("✨ Generate Summary", type="primary"):
                 else:
                     summary = generated.strip()
 
-            st.subheader("📌 Generated Summary")
+            st.subheader(" Generated Summary")
             st.write(summary)
 
             st.download_button(
-                "⬇️ Download Summary",
+                " Download Summary",
                 data=summary,
                 file_name="summary.txt",
                 mime="text/plain"
